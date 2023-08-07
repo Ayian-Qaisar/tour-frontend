@@ -10,7 +10,7 @@ import { AuthContext } from "./../../context/AuthContext";
 
 const nav__links = [
   {
-    path: "/home",
+    path: "/",
     display: "Home",
   },
   {
@@ -77,7 +77,7 @@ const Header = () => {
                   <li className="nav__item" key={index}>
                     <NavLink
                       to={item.path}
-                      className={navClass =>
+                      className={(navClass) =>
                         navClass.isActive ? "active__link" : ""
                       }
                     >
