@@ -47,8 +47,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  {
-  "proxy": "https://tour-backend-production-88af.up.railway.app"
-}
+  }
 }

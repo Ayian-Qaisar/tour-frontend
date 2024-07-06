@@ -22,8 +22,8 @@ const Booking = ({ tour, avgRating }) => {
     bookAt: "",
   });
 
-  const handleChange = e => {
-    setBooking(prev => ({ ...prev, [e.target.id]: e.target.value }));
+  const handleChange = (e) => {
+    setBooking((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
 
   const serviceFee = 10;
@@ -31,7 +31,7 @@ const Booking = ({ tour, avgRating }) => {
     Number(price) * Number(booking.guestSize) + Number(serviceFee);
 
   //   send data to the server
-  const handleClick = async e => {
+  const handleClick = async (e) => {
     e.preventDefault();
 
     try {
@@ -72,7 +72,7 @@ const Booking = ({ tour, avgRating }) => {
           ${price} <span>/per person</span>
         </h3>
         <span className="tour__rating d-flex align-items-center ">
-          <i class="ri-star-s-fill"></i>
+          <i className="ri-star-s-fill"></i>
           {avgRating === 0 ? null : avgRating} ({reviews?.length})
         </span>
       </div>
@@ -124,7 +124,7 @@ const Booking = ({ tour, avgRating }) => {
         <ListGroup>
           <ListGroupItem className="border-0 px-0">
             <h5 className="d-flex align-items-center gap-1">
-              ${price} <i class="ri-close-line"></i> 1 person
+              ${price} <i className="ri-close-line"></i> 1 person
             </h5>
             <span> ${price}</span>
           </ListGroupItem>
